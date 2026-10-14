@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Navlinks from "./Navlinks";
+
 
 const Header = () => {
     const date = new Date().toLocaleDateString("bn-BD", {
@@ -8,7 +10,7 @@ const Header = () => {
     return (
         <header className="w-full border-b border-gray-200 bg-[#f9fbf9]">
             <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-                {/* Left: logo + title + date */}
+
                 <div className="flex items-center gap-3">
                     <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#05893e]">
                         <Image
@@ -27,7 +29,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* Right: auth buttons */}
+
                 <div className="flex items-center gap-4">
                     <button
                         type="button"
@@ -43,6 +45,9 @@ const Header = () => {
                     </button>
                 </div>
             </div>
+
+        <Navlinks/>
+
         </header>
     );
 };
